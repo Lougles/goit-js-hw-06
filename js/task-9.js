@@ -2,14 +2,7 @@
 import list from './users.js'
 
 const getNamesSortedByFriendsCount = users => {
-  // const names = users.map(user => user.friends.forEach((num, idx) => console.log(idx, num)));
-  // return users.reduce((index, user) => user.friends.sort(index), 0);
-  let obj = {};
-  let countFriends = users.forEach(user => obj[user.friends] = '0');
-  countFriends.forEach(user => {
-    obj[user.friends] ? obj[user.friends] + 1 : console.log(user.friends);
-  })
-  return obj;
+  return users.sort((a, b) => a.friends.length > b.friends.length ? 1 : -1);
 };
 
 console.log(getNamesSortedByFriendsCount(list));
