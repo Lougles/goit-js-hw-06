@@ -1,7 +1,7 @@
 // Получить пользоваля (не массив) по email (поле email, он уникальный).
 import list from './users.js'
 const getUserWithEmail = (users, email) => {
-  return users.find(user => user.email === email);
+  return users.find(({email}) => email === email);
 };
 
 console.log(getUserWithEmail(list, 'shereeanthony@kog.com')); // {объект пользователя Sheree Anthony}

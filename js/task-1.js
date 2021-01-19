@@ -4,7 +4,7 @@ import list from './users.js'
 // console.log(getUserNames);
 
 const getUserNames = users => {
-  return users.map(user => user.name);
+  return users.map(({name}) => name);
 };
 
 console.log(getUserNames(list));
